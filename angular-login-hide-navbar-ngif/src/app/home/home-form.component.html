@@ -1,0 +1,17 @@
+
+
+    <div class="signin-content">
+      <div><p class="indent">Select your application</p></div>
+ <pre> <label for="power">List of Applications</label></pre>
+  <select class="form-control"  id="power"
+          required
+          [(ngModel)]="model.power" name="power">
+    <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+  </select>
+</div>
+<pre>
+<mat-bar-button 
+  [options]="barButtonOptions" 
+  (btnClick)="someFunc2()">
+</mat-bar-button></pre>
+

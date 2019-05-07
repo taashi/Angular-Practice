@@ -1,0 +1,26 @@
+<div class="signin-content">
+    <span>
+        <img src="assets/img/Rocket2.png" class="angular-logo">
+      </span>
+      <span class="fill-remaining-space"></span>
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p>Please login to the application</p>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="User" formControlName="userName" required>
+          <mat-error *ngIf="isFieldInvalid('userName')">
+            Please enter the username
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <mat-error *ngIf="isFieldInvalid('userName')">
+            Please enter the password
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
